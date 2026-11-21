@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yesica Alzate | Portafolio Profesional</title>
+
+    <!-- Librería para generar PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #EAF4FC;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #7CB9E8, #A7D8F0);
+            color: #17365D;
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 19px;
+            color: #23476B;
+        }
+
+        nav {
+            background-color: #B5DDF2;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #17365D;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        h2 {
+            color: #2563A6;
+            margin-bottom: 18px;
+            border-bottom: 2px solid #D6EAF8;
+            padding-bottom: 10px;
+        }
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile p {
+            font-size: 17px;
+        }
+
+        .info p {
+            margin: 10px 0;
+        }
+
+        .experience-card {
+            border-left: 4px solid #7CB9E8;
+            padding-left: 18px;
+        }
+
+        .experience-card h3 {
+            color: #1e3a5f;
+        }
+
+        .contact a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        /* Botón de descarga PDF */
+        .download-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .download-btn {
+            background-color: #2563A6;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #17365D;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #B5DDF2;
+            color: #17365D;
+            text-align: center;
+            padding: 22px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+
+            section {
+                padding: 22px;
+            }
+        }
+
+        /* Ajustes para el documento PDF */
+        @media print {
+            body {
+                background: white;
+            }
+
+            section {
+                box-shadow: none;
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CONTENIDO DEL PORTAFOLIO -->
+    <div id="portafolio">
+
+        <header>
+            <h1>Yesica Alzate</h1>
+            <p>Administradora Tecnológica</p>
+            <p>Estudiante de sexto semestre - ITM</p>
+        </header>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#perfil">Perfil</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <main class="container">
+
+            <section id="inicio" class="profile">
+                <h2>Bienvenido a mi portafolio</h2>
+
+                <p>
+                    Soy Yesica Alzate, estudiante de sexto semestre
+                    de Administración Tecnológica en el Instituto
+                    Tecnológico Metropolitano (ITM).
+                    Este espacio presenta mi perfil profesional
+                    y mi experiencia laboral.
+                </p>
+            </section>
+
+            <section id="perfil">
+                <h2>Perfil Profesional</h2>
+
+                <p>
+                    Administradora Tecnológica en formación,
+                    con experiencia laboral como auxiliar en
+                    salud oral en Dental Natural.
+                    Interesada en continuar fortaleciendo mis
+                    conocimientos y competencias profesionales,
+                    integrando la administración y la tecnología.
+                </p>
+
+                <br>
+
+                <p>
+                    El Administrador Tecnológico del ITM es un
+                    ciudadano global que cuenta con formación
+                    integral, con cualidades éticas y de autonomía
+                    para su desarrollo profesional, con capacidad
+                    para planear, organizar, dirigir, controlar y
+                    evaluar los procesos de gestión del conocimiento,
+                    tecnología e innovación, alineándolos con la
+                    estrategia para el logro de los objetivos de las
+                    organizaciones en las que interviene, lo cual le
+                    permite tomar decisiones en contextos complejos,
+                    dinámicos e inciertos.
+                </p>
+            </section>
+
+            <section id="experiencia">
+                <h2>Experiencia Laboral</h2>
+
+                <div class="experience-card">
+                    <h3>Auxiliar en Salud Oral</h3>
+                    <p><strong>Empresa:</strong> Dental Natural</p>
+
+                    <p>
+                        Experiencia laboral en el área de salud oral.
+                    </p>
+                </div>
+            </section>
+
+            <section id="contacto" class="contact">
+                <h2>Información de Contacto</h2>
+
+                <div class="info">
+
+                    <p><strong>Nombre:</strong> Yesica Alzate</p>
+
+                    <p><strong>Documento:</strong> 1007338097</p>
+
+                    <p><strong>Edad:</strong> 26 años</p>
+
+                    <p><strong>Dirección:</strong> Cra 42BB # 111-27</p>
+
+                    <p>
+                        <strong>Correo:</strong>
+                        <a href="mailto:andreaa_alzate@hotmail.com">
+                            andreaa_alzate@hotmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>Formación:</strong>
+                        Administración Tecnológica - ITM
+                    </p>
+
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>© 2026 Yesica Alzate | Portafolio Profesional</p>
+            <p>Administración Tecnológica - ITM</p>
+        </footer>
+
+    </div>
+
+    <!-- BOTÓN DE DESCARGA (NO SE INCLUYE EN EL PDF) -->
+    <div class="download-container">
+        <button class="download-btn" onclick="descargarPDF()">
+            📄 Descargar portafolio en PDF
+        </button>
+    </div>
+
+    <!-- FUNCIÓN PARA GENERAR EL PDF -->
+    <script>
+        function descargarPDF() {
+
+            const elemento = document.getElementById('portafolio');
+
+            const opciones = {
+                margin: 10,
+                filename: 'Portafolio_Yesica_Alzate.pdf',
+
+                image: {
+                    type: 'jpeg',
+                    quality: 0.98
+                },
+
+                html2canvas: {
+                    scale: 2,
+                    useCORS: true
+                },
+
+                jsPDF: {
+                    unit: 'mm',
+                    format: 'a4',
+                    orientation: 'portrait'
+                },
+
+                pagebreak: {
+                    mode: ['avoid-all', 'css', 'legacy']
+                }
+            };
+
+            html2pdf()
+                .set(opciones)
+                .from(elemento)
+                .save();
+        }
+    </script>
+
+</body>
+</html>
